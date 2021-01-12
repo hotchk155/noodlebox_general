@@ -746,7 +746,7 @@ void setup() {
   
   // USB Serial 
   Serial.begin(9600);
-  Serial.println("Begin");  
+  Serial.println("Begin - NOODLEBOX - SET CAL MODE");  
 
   // Hard serial (MIDI)
   Serial1.begin(31250);
@@ -784,7 +784,7 @@ void loop() {
       digitalWrite(P_LEDR1,HIGH);
       digitalWrite(P_LEDR2,LOW);
       digitalWrite(P_LEDR3,LOW);    
-      Serial.println("--- CALIBRATE ---");
+      Serial.println("--- NOODLE: CALIBRATE ---");
       calibrate();
       digitalWrite(P_LEDR1,HIGH);
       digitalWrite(P_LEDR2,HIGH);
@@ -794,7 +794,7 @@ void loop() {
     digitalWrite(P_LEDR1,HIGH);
     digitalWrite(P_LEDR2,LOW);
     digitalWrite(P_LEDR3,LOW);
-    Serial.println("--- TEST ---");
+    Serial.println("--- NOODLE: TEST ---");
     scale_check();
     digitalWrite(P_LEDR1,HIGH);
     digitalWrite(P_LEDR2,HIGH);
@@ -805,4 +805,3 @@ void loop() {
 //
 // END
 //
-
