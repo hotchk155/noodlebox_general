@@ -1,0 +1,9 @@
+[Settings]
+Active Directory=C:\Users\jason\Dropbox\Github\noodlebox_general\led_matrix_tester\
+Target=PIC12F1822
+Active Compiler=BoostC
+Active Config=Debug
+Config=1
+[Files]
+Count=1
+File0=led_matrix_tester.c
