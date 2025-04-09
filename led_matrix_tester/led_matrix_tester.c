@@ -76,7 +76,7 @@ void update_display() {
 		P_ROW_DAT = !!(row==7);
 		P_ROW_CLK = 1;
 		P_COL_STORE = 1;
-		//delay_ms(1);
+		delay_ms(1);
 	}
 }
 
@@ -126,7 +126,7 @@ void main()
 	leds[7] = 0b10101010;
 #endif	
 	
-#if 1
+#if 0
 	leds[0] = 0b10000000;
 	leds[1] = 0b00010000;
 	leds[2] = 0b00000010;
@@ -136,11 +136,22 @@ void main()
 	leds[6] = 0b00100000;
 	leds[7] = 0b00000100;
 #endif		
+
 	
 	// loop forever (until power off)
 	for(;;) {	
-	
-		update_display();
+
+		leds[0] = 0xff;
+		leds[1] = 0xff;
+		leds[2] = 0xff;
+		leds[3] = 0xff;
+		leds[4] = 0xff;
+		leds[5] = 0xff;
+		leds[6] = 0xff;
+		leds[7] = 0xff;
+		for(int i=0; i<50; ++i) {
+			update_display();
+		}
 	}	
 }
 
